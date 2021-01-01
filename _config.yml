@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Milo‘s Share
-subtitle: '分享'
-description: '分享我的产品之路'
-keywords: 产品经理_运营_产品_
+title: MiloBlog
+subtitle: '日常分享'
+description: '欢迎常来，离开前记得留下痕迹哈！'
+keywords: 产品经理_运营_产品_PM
 author: Milo
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://chudonghua.com
+url: http://milochu.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

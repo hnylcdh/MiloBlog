@@ -255,7 +255,7 @@ post_meta:
 # Dependencies: https://github.com/next-theme/hexo-word-counter
 symbols_count_time:
   separated_meta: true  # 是否换行显示 字数统计 及 阅读时长
-  item_text_post: true  # 文章 字数统计 阅读时长 使用图标 还是 文本表示
+  item_text_post: false  # 文章 字数统计 阅读时长 使用图标 还是 文本表示
   item_text_total: false  # 博客底部统计 字数统计 阅读时长 使用图标 还是 文本表示
  
   

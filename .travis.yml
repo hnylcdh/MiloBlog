@@ -1,13 +1,22 @@
 sudo: false
 language: node_js
 node_js:
-  - 14 # use nodejs v10 LTS
+  - 10 # use nodejs v10 LTS
 cache: npm
 branches:
   only:
     - main # build master branch only
+
+before_install:               # install 阶段之前执行
+  - npm install -g hexo-cli   # 全局安装 Hexo 命令行工具
+
+install:                      # 在安装项目环境阶段需要运行的命令，一条一行，类似的还有 before_install
+  - npm install               # 安装 package.json 中的依赖
+
 script:
-  - hexo generate # generate static files
+  - hexo clean
+  - hexo generate # Hexo 常规命令，执行清理和生成
+
 deploy:
   provider: pages
   skip-cleanup: true
@@ -16,5 +25,9 @@ deploy:
   on:
     branch: main
   local-dir: public
+
+notifications: # 设置通知项
+  email: true
+
 
 

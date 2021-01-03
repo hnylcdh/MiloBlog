@@ -6,18 +6,8 @@ cache: npm
 branches:
   only:
     - main # build master branch only
-
-before_install:               # install 阶段之前执行
-  - npm install -g hexo-cli   # 全局安装 Hexo 命令行工具
-
-install:                      # 在安装项目环境阶段需要运行的命令，一条一行，类似的还有 before_install
-  - npm install               # 安装 package.json 中的依赖
-
-
 script:
-  - hexo clean
-  - hexo generate # Hexo 常规命令，执行清理和生成
-
+  - hexo generate # generate static files
 deploy:
   provider: pages
   skip-cleanup: true
@@ -28,7 +18,6 @@ deploy:
   local-dir: public
 
 notifications: # 设置通知项邮件
-  email: true
-
+  email: false
 
 

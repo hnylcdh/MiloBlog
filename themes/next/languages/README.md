@@ -5,7 +5,7 @@
 You can use internationalization to present your site in different languages. The default language is set by modifying the `language` setting in Hexo `_config.yml`. You can also set multiple languages and modify the order of default languages.
 
 ```yml
-language: en
+language: zh-CN
 ```
 
 ```yml
@@ -28,7 +28,7 @@ If you would like to customize the default translation, you do not need to modif
       post:
         copyright:
           # the translation you perfer
-          author: 本文博主
+          author: Milo
     en:
       menu:
         schedule: Calendar

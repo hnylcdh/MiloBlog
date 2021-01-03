@@ -27,7 +27,7 @@ deploy:
     branch: main
   local-dir: public
 
-notifications: # 设置通知项
+notifications: # 设置通知项邮件
   email: true
 
 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>微信斜体</title>
+	<style type="text/css">
+		.pandaflex {
+			display: -webkit-flex;
+			display: flex;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<div class="pandaflex" style="padding: 2px 15px;margin-top: 33px;border: 1px solid #d3d3d3;height: 120px;">
+			<textarea id="json_input" name="json_input" class="json_input" spellcheck="false" placeholder="请输入小写英文字母(你要是输入大写也行，结果暂时只会输出小写)"
+			 style="font-size: 18px;padding: 9px;width: 100%;border:0;"></textarea>
+		</div>
+
+
+		<div class="pandaflex" style="justify-content: center; margin-top: 18px;">
+			<!-- <div>转换</div> -->
+			<button id="generate_qr_code" onclick="translateA()" type="submit" class="btn btn-primary" style="background-color: #4AB3F4;border: 1px solid #1da1f2;    padding: 6px 26px;color: #fff;border-radius: 29px;font-size: 20px;">
+				生成微信斜体
+			</button>
+		</div>
+		<div class="pandaflex" id="result_text" style="font-size: 28px;padding: 15px;word-wrap:break-all;border: 0;">
+			𝙬𝙤𝙧𝙙 𝙡𝙞𝙠𝙚 𝙩𝙝𝙞𝙨
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var origin = "abcdefghijklmnopqrstuvwxyz"
+	var style1 = ["𝙖","𝙗","𝙘","𝙙","𝙚","𝙛","𝙜","𝙝","𝙞","𝙟","𝙠","𝙡","𝙢","𝙣","𝙤","𝙥","𝙦","𝙧","𝙨","𝙩","𝙪","𝙫","𝙬","𝙭","𝙮","𝙯"];
+	var dic_str = "{";
+	for (var i = 0; i < origin.length; i++) {
+		dic_str += '"' + origin[i] + '":"' + i + '",';
+		console.log(origin[i]);
+	}
+	dic_str = dic_str.substr(0, dic_str.length - 1);
+	dic_str += '}'
+	// dic_str.replace(',}','}');
+	console.log(dic_str);
+	var originDict = JSON.parse(dic_str);
+
+
+	// 	var buffer = new Buffer('中'); 
+	// console.log(buffer.length); // => 3
+	// console.log(buffer); // => <Buffer e4 b8 ad>
+	for (var i = 0; i < style1.length; i++) {
+		console.log(style1[i]);
+	}
+	var str = '𝙖';
+	var charCode = str.charCodeAt(0);
+	console.log(charCode); // => 20013
+
+
+
+
+
+
+
+
+
+
+
+	// https://www.cnblogs.com/doublenet/p/5616451.html
+	// 将字符串格式化为UTF8编码的字节
+	var writeUTF = function (str, isGetBytes) {
+		var back = [];
+		var byteSize = 0;
+		for (var i = 0; i < str.length; i++) {
+			var code = str.charCodeAt(i);
+			if (0x00 <= code && code <= 0x7f) {
+				byteSize += 1;
+				back.push(code);
+			} else if (0x80 <= code && code <= 0x7ff) {
+				byteSize += 2;
+				back.push((192 | (31 & (code >> 6))));
+				back.push((128 | (63 & code)))
+			} else if ((0x800 <= code && code <= 0xd7ff)
+				|| (0xe000 <= code && code <= 0xffff)) {
+				byteSize += 3;
+				back.push((224 | (15 & (code >> 12))));
+				back.push((128 | (63 & (code >> 6))));
+				back.push((128 | (63 & code)))
+			}
+		}
+		for (i = 0; i < back.length; i++) {
+			back[i] &= 0xff;
+		}
+		if (isGetBytes) {
+			return back
+		}
+		if (byteSize <= 0xff) {
+			return [0, byteSize].concat(back);
+		} else {
+			return [byteSize >> 8, byteSize & 0xff].concat(back);
+		}
+	}
+	// aaa = writeUTF('𝙖');
+	// console.log(aaa);
+
+	function translateA() {
+		// body...
+		var result_text = document.getElementById('result_text');
+		// top_text.value = '23333';
+		result_text.innerHTML = '23333';
+
+
+		var top_text = document.getElementById('json_input').value;
+		if (top_text.length < 1) {
+			alert('请输入英文小写哦！');
+		}
+		top_text = top_text.toLowerCase();
+		var output = '';
+		for (var i = 0; i < top_text.length; i++) {
+			console.log(top_text[i]);
+			var index = originDict[top_text[i]];
+			if (index) {
+			output += style1[index];
+				
+			}
+			else {
+				output += top_text[i];
+			}
+		}
+		console.log('output=' + output);
+		result_text.innerHTML = output;
+	}
+</script>
+
+</html>

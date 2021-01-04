@@ -7,7 +7,6 @@ branches:
   only:
     - main # build master branch only
 script:
-  - hexo clean
   - hexo generate # generate static files
 deploy:
   provider: pages
@@ -17,8 +16,5 @@ deploy:
   on:
     branch: main
   local-dir: public
-
-notifications: # 设置通知项邮件
-  email: false
 
 

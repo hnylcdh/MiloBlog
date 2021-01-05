@@ -727,7 +727,7 @@ cloudflare_analytics:
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
 # Visit https://firebase.google.com/docs/firestore/ to get more information about firestore.
 firestore:
-  enable: true
+  enable: false
   collection: articles # Required, a string collection name to access firestore database
   apiKey: AIzaSyA_SXo31R81-Cg0HBRMxK07yrjsM21EHxU
   projectId: miloblog-8717a

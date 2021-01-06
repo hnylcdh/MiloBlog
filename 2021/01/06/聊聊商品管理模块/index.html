@@ -23,31 +23,41 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="单身PM狗">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MiloBlog">
-<meta property="og:url" content="https://milochu.com/index.html">
+<meta name="description" content="聊聊商品管理模块一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。    基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。  关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、规格、价格、条形码、货号、库存等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不一样的角度看商品管理">
+<meta property="og:url" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/index.html">
 <meta property="og:site_name" content="MiloBlog">
-<meta property="og:description" content="单身PM狗">
+<meta property="og:description" content="聊聊商品管理模块一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。    基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。  关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、规格、价格、条形码、货号、库存等">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/01/06/1rsm4XoAdUOpKZi.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/06/meKXVlHBMU5ErGS.png">
+<meta property="og:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/media/16099355871068/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.png">
+<meta property="og:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/media/16099355871068/%E7%B1%BB%E7%9B%AE.png">
+<meta property="og:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/media/16099355871068/%E5%B1%9E%E6%80%A7.png">
+<meta property="og:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/media/16099355871068/%E5%93%81%E7%89%8C.png">
+<meta property="article:published_time" content="2021-01-06T18:39:56.000Z">
+<meta property="article:modified_time" content="2021-01-06T12:51:02.927Z">
 <meta property="article:author" content="Milo">
-<meta property="article:tag" content="产品经理,运营,产品,PM,分析,产品体验,博客">
+<meta property="article:tag" content="后台">
+<meta property="article:tag" content="商品管理">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/01/06/1rsm4XoAdUOpKZi.png">
 
 
-<link rel="canonical" href="https://milochu.com/">
+<link rel="canonical" href="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>MiloBlog</title>
+<title>不一样的角度看商品管理 | MiloBlog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186148280-1"></script>
     <script>
@@ -155,7 +165,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -168,6 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97"><span class="nav-number">1.</span> <span class="nav-text">聊聊商品管理模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9C%AC%E6%96%87%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">一、本文前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">1.2.</span> <span class="nav-text">二、商品信息的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97%E7%BB%84%E6%88%90"><span class="nav-number">1.3.</span> <span class="nav-text">三、商品管理系统模块组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%A8%A1%E5%9D%97%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.4.</span> <span class="nav-text">四、模块简单介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">五、总结</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -232,9 +243,10 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
@@ -254,9 +266,9 @@
       <meta itemprop="name" content="MiloBlog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">不一样的角度看商品管理</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          不一样的角度看商品管理
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -280,6 +292,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -305,7 +324,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="聊聊商品管理模块"><a href="#聊聊商品管理模块" class="headerlink" title="聊聊商品管理模块"></a>聊聊商品管理模块</h1><h2 id="一、本文前言"><a href="#一、本文前言" class="headerlink" title="一、本文前言"></a>一、本文前言</h2><p>以前做过商品管理系统，最近想写出来看看！！！！</p>
+        <h1 id="聊聊商品管理模块"><a href="#聊聊商品管理模块" class="headerlink" title="聊聊商品管理模块"></a>聊聊商品管理模块</h1><h2 id="一、本文前言"><a href="#一、本文前言" class="headerlink" title="一、本文前言"></a>一、本文前言</h2><p>以前做过商品管理系统，最近想写出来看看！！！！</p>
 <h2 id="二、商品信息的组成"><a href="#二、商品信息的组成" class="headerlink" title="二、商品信息的组成"></a>二、商品信息的组成</h2><ol>
 <li>个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。</li>
 </ol>
@@ -358,7 +377,6 @@
 <p>用于商品新增、商品图片新增、商品信息更新、商品图片更新、品牌新增、品牌图片新增等的模块。</p>
 <h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>看似复杂的商品管理系统，在当我们从系统使用的角度来看的时候，就会发现它也有章理可循，我们如何输入商品，输入商品的那些信息，这些信息是什么，这些信息应该怎么处理等等，当我们回答完这些问题的时候，关于商品管理系统的轮廓也有出来了，后面的事情就是根据公司的业务来决定系统功能的多少或从人员使用习惯的用户体验角度来确定页面布局和细节了。</p>
 
-      
     </div>
 
     
@@ -366,146 +384,39 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://milochu.com/2020/12/27/%E5%B9%B4%E7%BB%88%E8%B4%A6%E5%8D%95%E6%80%8E%E4%B9%88%E5%81%9A%E6%89%8D%E5%90%B8%E5%BC%95%E4%BA%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Milo">
-      <meta itemprop="description" content="单身PM狗">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MiloBlog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/%E5%B9%B4%E7%BB%88%E8%B4%A6%E5%8D%95%E6%80%8E%E4%B9%88%E5%81%9A%E6%89%8D%E5%90%B8%E5%BC%95%E4%BA%BA/" class="post-title-link" itemprop="url">年终账单应该怎么做才能吸引人？</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-12-27 22:02:38" itemprop="dateCreated datePublished" datetime="2020-12-27T22:02:38+00:00">2020-12-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-06 12:51:02" itemprop="dateModified" datetime="2021-01-06T12:51:02+00:00">2021-01-06</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">活动设计</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>又到了年末，肯定许多产品小伙伴都在思考自家要不要做年终账单。如果做，那拿什么数据或收益说服其他部门配合，怎么做等等；如果不做，总感觉竞品或其他家做了，自家不做好像就比不上人家了，放弃一个年末促活活动很可惜等等。</p>
-<p>正好最近我也在思考这个问题，我就把我的想法与大家分享下，主要分三块：</p>
+<div class="post-copyright">
 <ul>
-<li>要不要做？</li>
-<li>怎么做？</li>
-<li>评估活动效果？</li>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Milo
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/" title="不一样的角度看商品管理">https://milochu.com/2021/01/06/聊聊商品管理模块/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-<h2 id="一、要不要做？"><a href="#一、要不要做？" class="headerlink" title="一、要不要做？"></a>一、要不要做？</h2><p>下面从几个角度来说简单说下要不要做：</p>
-<h3 id="1-客观数据指标"><a href="#1-客观数据指标" class="headerlink" title="1. 客观数据指标"></a>1. 客观数据指标</h3><h4 id="业务丰富程度"><a href="#业务丰富程度" class="headerlink" title="业务丰富程度"></a>业务丰富程度</h4><p>业务不够丰富会导致账单上的内容变少，这里所说的内容是可指可描述的业务数据，就比如支付宝，它分了“最爱把钱花在”和“我想给世界表达一些爱”两个大类，在第一个类下又衍生了“家居生活”、“穿衣打扮”等；也可只业务种类多样，种类多了数据自然也会比单一的业务丰富一些。</p>
-<h4 id="数据够不够多"><a href="#数据够不够多" class="headerlink" title="数据够不够多"></a>数据够不够多</h4><p>数据不够多支撑不起好看的账单数据。这个就看日活、月活的数量。即使只有一个业务，如果用户越活跃，那么产生的数据就越多。有的小伙伴会问，用户使用时长和累计登录等都可以作为账单类型和数据，但其实并不是每个APP都适合这么做。比如一些工具类APP(例如汇率、，用户打开的频率不高，使用时长不多，也没有其他衍生的使用场景，就不适合放这类数据；</p>
-<h4 id="APP类型"><a href="#APP类型" class="headerlink" title="APP类型"></a>APP类型</h4><p>购物、社交、音乐、美食佳饮这4类比较适合做年终账单，教育，旅游出行、娱乐、商务、摄影与录像、生活、财务、健康健美这些类别中的小部分APP也很适合做账单，比如抖音、携程、美团、饿了么、鲨鱼记账、滴滴、钉钉、企业微信等</p>
-<h4 id="过往年终账单效果"><a href="#过往年终账单效果" class="headerlink" title="过往年终账单效果"></a>过往年终账单效果</h4><p>如果以前做过年终账单，那可以回顾过往的活动效果，例如日活是否增加、7日留存是否增加，付费是否增加、为其他业务/部门带来的效益等。 如果做的好，那可以继续做，看看上次做的好地方，争取这次继续做的更好；如果做的不好，则分析下不好的问题，再结合今年的活动目标决定是否要做，做的话如何解决或者规避以上问题。</p>
-<h3 id="2-“用户态度”因素"><a href="#2-“用户态度”因素" class="headerlink" title="2. “用户态度”因素"></a>2. “用户态度”因素</h3><ul>
-<li>这是一个比较主观的，如果客观指标都不满足，但仍旧想做，那么不妨进行一下用户调研，看看用户是否想要查看年终账单</li>
-</ul>
-<h3 id="3-其他因素"><a href="#3-其他因素" class="headerlink" title="3.其他因素"></a>3.其他因素</h3><ul>
-<li>老板要做：那就做吧，老板开心最重要。</li>
-<li>竞品做：差不多等级的竞品做的话，不妨考虑下也做。</li>
-</ul>
-<h2 id="二、怎么做？"><a href="#二、怎么做？" class="headerlink" title="二、怎么做？"></a>二、怎么做？</h2><p>在确定要做之后，要考虑的就是怎么做。我理解的账单公式：年终账单=自家业务数据展示+趣味性+UI；</p>
-<h3 id="1-自家业务数据展示"><a href="#1-自家业务数据展示" class="headerlink" title="1. 自家业务数据展示"></a>1. 自家业务数据展示</h3><p>看看自家的业务数据，并定义一个叙述的故事。例如XX外卖：20XX年，你共计点餐XX次，最晚的一次是在XXXX-XX-XX XX-XX……；又如XX音乐：XXXX首歌，XXXX小时，今年我们一起….。如果今年是APP的第一年，也可以从第一次角度来开始，例如XXXX-XX-XX，我们第一次相遇…..。 </p>
-<p>如果业务多或数据多，请分页展示，但把页数控制在4或5页之内，多了用户连翻下去的欲望都没了(不知道下面还有多少页)，除非有把握用户爱看账单数据或账单设计趣味性十足，能让用户不由自主的点击下一页。</p>
-<h3 id="2-趣味性"><a href="#2-趣味性" class="headerlink" title="2. 趣味性"></a>2. 趣味性</h3><p>如果我们仅仅描述用户今年做了什么，用户可能会觉得账单很枯燥，仅仅一些数字用户看了也不知道自己这些数据是牛逼的还是just so so,也就无法吸引用户后续查看，更无法让用户进行分享和传播；那么我们先前做的一切工作不都白费了吗？所以让账单有趣起来，起码让用户看了账单后能对账单打60分，觉得：恩，这账单挺不错，没想到我在XXX上是这样的数据啊。</p>
-<p>一般来说，增加账单趣味性有以下几种：</p>
-<h4 id="对比-排名"><a href="#对比-排名" class="headerlink" title="对比/排名"></a>对比/排名</h4><p>在叙述账单的时候把用户的数据放到相似群体之中进行对比。这个相似可以性别相似、地区相似、年龄相似，例如支付宝会告诉你你在所在地区的消费排名；X团的吃货值PK；X站的战斗力；这些都能让用户很直观的感受到自己所在的层次；如果所在层次够高，用户分享和传播的概率也会越高，毕竟想炫耀嘛。</p>
-<p>对比/排名一般穿插在数据描述之中。</p>
-<h4 id="关键词-今年"><a href="#关键词-今年" class="headerlink" title="关键词(今年)"></a>关键词(今年)</h4><p>根据用户今年数据并分析后给出精确或相关联的关键词，切合用户，让用户一看就符合自己。例如X评的吃货属性，X马的关键词。如果说对比/排名是直接刺激用户，勾起用户的炫耀攀比心的话，那关键词就是用文艺的形式让用户对号入座，产生归属感，并引导用户分享自己的关键词以让好友产生认同。</p>
-<p>如果无法做到用户今年的数据和关键词相匹配，那么建议选预测词吧。</p>
-<p>一般关键词用在账单结尾，很小部分的账单会通过关键词开启账单。</p>
-<h4 id="预测词-下一年"><a href="#预测词-下一年" class="headerlink" title="预测词(下一年)"></a>预测词(下一年)</h4><p>预测词适合一些没有较多用户或用户数据，但又想做年终账单的平台。没办法对用户进行对比/排名、排名不好看或者关键词不能匹配，那只能用其他方式来让账单产生趣味性。</p>
-<p>预测词可以和用户行为没有强关联，只要让觉得”好“即可；且预测词是预测下一年的，所以一般使用好运、发财相关词，起到安慰或祝福用户的作用，也能吸引用户进行分享。</p>
-<p>一般预测词用在账单结尾，基本不会用在开头。</p>
-<h4 id="回忆杀"><a href="#回忆杀" class="headerlink" title="回忆杀"></a>回忆杀</h4><p>可以没有对比、可以没有排名，用情感来打动用户，XX云音乐这么做过。对用户情感理解、平台归属感以及对文案要求很高，不好把握。</p>
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
-<li>荣誉相关：颁发荣誉证书或奖状；公益类平台会这样做吧，今年做了好事，给你好人卡。</li>
-<li>立flag:让用户自己树立目标，X为用过</li>
-<li>……</li>
-</ul>
-<p>可以在账单中使用一种或两种方式来增加趣味性，不建议多用</p>
-<h3 id="3-UI"><a href="#3-UI" class="headerlink" title="3. UI"></a>3. UI</h3><p>我认为UI和前面两个加起来的作用一样。账单每页的数据就那么几行，为了吸引用户进入账单情境或让用户产生共鸣就要从UI下手。 用户点击“开启账单”后能否进入情境，UI作用非常大。</p>
-<p>一个好的UI设计可以撑起整个账单，让账单更加饱满和诱人！</p>
-<h2 id="三、监控和评估活动效果"><a href="#三、监控和评估活动效果" class="headerlink" title="三、监控和评估活动效果"></a>三、监控和评估活动效果</h2><h3 id="1-提前建立活动小姑评估体系"><a href="#1-提前建立活动小姑评估体系" class="headerlink" title="1. 提前建立活动小姑评估体系"></a>1. 提前建立活动小姑评估体系</h3><p>在活动设计时，就要建立起从用户哪里来到哪里去了、在哪里做了什么、在哪里停留时间久，分享等方面的全方位检测和评估体系；从该体系出发进行数据埋点</p>
-<h3 id="2-每日监控活动数据"><a href="#2-每日监控活动数据" class="headerlink" title="2. 每日监控活动数据"></a>2. 每日监控活动数据</h3><p>活动上线后并不是账单就不能变了，在上线前几天可以根据监控的反馈进行适当调整以便让活动更加成功。</p>
+</div>
 
-      
-    </div>
+          <div class="post-tags">
+              <a href="/tags/%E5%90%8E%E5%8F%B0/" rel="tag"><i class="fa fa-tag"></i> 后台</a>
+              <a href="/tags/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 商品管理</a>
+          </div>
 
-    
-    
-    
+        
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/12/27/%E5%B9%B4%E7%BB%88%E8%B4%A6%E5%8D%95%E6%80%8E%E4%B9%88%E5%81%9A%E6%89%8D%E5%90%B8%E5%BC%95%E4%BA%BA/" rel="next" title="年终账单应该怎么做才能吸引人？">
+                  年终账单应该怎么做才能吸引人？ <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
@@ -514,6 +425,14 @@
 
 
 
+
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -606,6 +525,26 @@
 
 
 
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/";
+    this.page.identifier = "2021/01/06/聊聊商品管理模块/";
+    this.page.title = "不一样的角度看商品管理";
+    };
+  NexT.utils.loadComments('#disqus_thread', () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pmmilo.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
 
 </body>
 </html>

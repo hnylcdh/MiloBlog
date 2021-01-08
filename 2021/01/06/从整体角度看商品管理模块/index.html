@@ -18,17 +18,18 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
+<meta name="description" content="一、本文前言 以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成  个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从整体角度看商品管理模块">
 <meta property="og:url" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/index.html">
 <meta property="og:site_name" content="MiloBlog">
-<meta property="og:description" content="一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
+<meta property="og:description" content="一、本文前言 以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成  个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
 <meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png">
@@ -37,7 +38,7 @@
 <meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%B1%9E%E6%80%A7.png">
 <meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%93%81%E7%89%8C.png">
 <meta property="article:published_time" content="2021-01-06T18:39:56.000Z">
-<meta property="article:modified_time" content="2021-01-08T08:56:24.284Z">
+<meta property="article:modified_time" content="2021-01-08T09:43:54.489Z">
 <meta property="article:author" content="Milo">
 <meta property="article:tag" content="后台">
 <meta property="article:tag" content="商品管理">
@@ -212,11 +213,6 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/hnylcdh" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hnylcdh" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
@@ -285,7 +281,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-08 08:56:24" itemprop="dateModified" datetime="2021-01-08T08:56:24+00:00">2021-01-08</time>
+        <time title="修改时间：2021-01-08 09:43:54" itemprop="dateModified" datetime="2021-01-08T09:43:54+00:00">2021-01-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -298,13 +294,6 @@
     </span>
 
   
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -330,67 +319,69 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一、本文前言"><a href="#一、本文前言" class="headerlink" title="一、本文前言"></a>一、本文前言</h2><p>以前做过商品管理系统，最近想写出来看看！！！！</p>
-<h2 id="二、商品信息的组成"><a href="#二、商品信息的组成" class="headerlink" title="二、商品信息的组成"></a>二、商品信息的组成</h2><ol>
+        <h2 id="一、本文前言">一、本文前言</h2>
+<p>以前做过商品管理系统，最近想写出来看看！！！！</p>
+<h2 id="二、商品信息的组成">二、商品信息的组成</h2>
+<ol>
 <li>个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。</li>
 </ol>
 <a id="more"></a>
-
 <img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png" class="" title="商品信息结构">
-
 <ol>
-<li><p>基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。</p>
+<li>
+<p>基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。</p>
 </li>
-<li><p>关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、规格、价格、条形码、货号、库存等</p>
+<li>
+<p>关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、规格、价格、条形码、货号、库存等</p>
 </li>
-<li><p>补充信息：商品描述、保质期、物流模板、毛重、净重等。</p>
+<li>
+<p>补充信息：商品描述、保质期、物流模板、毛重、净重等。</p>
 </li>
-<li><p>图片：分为商品主图和详情图</p>
+<li>
+<p>图片：分为商品主图和详情图</p>
 </li>
 </ol>
 <ol>
 <li>关于单规格和多规格的商品信息：</li>
 </ol>
 <p>个人认为多规格是一个商品组合，可以让人们把有多共同商品信息的商品放在一起方便管理。现在多规格商品并不是真正意义的多规格商品，例如iphonexsmax256G银色和iphonexsmax64G深空灰，而是人们可以随意组合的商品组合(淘宝也是这样设计)，例如iphonexs和iphonexsmax，都会放在一个商品里。</p>
-<h2 id="三、商品管理系统模块组成"><a href="#三、商品管理系统模块组成" class="headerlink" title="三、商品管理系统模块组成"></a>三、商品管理系统模块组成</h2><p>商品信息组成的章节说到了商品信息的组成，同时不同商品需要的商品信息要素不一样，以及商品管理系统设计的时候需要考虑系统的扩展性、灵活性以及稳定性，所以我们不会把每个商品的商品信息表结构都做成一样的。而是通过一定的方式进行区分，那通过哪个商品信息要素来区分不同的商品使用不同的商品表结构呢？那就是类目，想必在我们一些商品系统或商城后台新增商品的时候，必须要先选类目，选完类目后才会进入下一步的商品信息输入操作，这就是根据类目来确定这个商品需要那些商品信息属性，例如选择数码类类目，则会出现像素、摄像头等属性，例如选择服装类类目，则会出现尺寸、颜色等要素。所以在设计商品系统的时候首先需要有一个“ 类目 ”模块(请注意，这个类目是供后端用的，前端展示的类目需要单独再设计一个，并且让前端类目与后台类目进行映射)</p>
+<h2 id="三、商品管理系统模块组成">三、商品管理系统模块组成</h2>
+<p>商品信息组成的章节说到了商品信息的组成，同时不同商品需要的商品信息要素不一样，以及商品管理系统设计的时候需要考虑系统的扩展性、灵活性以及稳定性，所以我们不会把每个商品的商品信息表结构都做成一样的。而是通过一定的方式进行区分，那通过哪个商品信息要素来区分不同的商品使用不同的商品表结构呢？那就是类目，想必在我们一些商品系统或商城后台新增商品的时候，必须要先选类目，选完类目后才会进入下一步的商品信息输入操作，这就是根据类目来确定这个商品需要那些商品信息属性，例如选择数码类类目，则会出现像素、摄像头等属性，例如选择服装类类目，则会出现尺寸、颜色等要素。所以在设计商品系统的时候首先需要有一个“ 类目 ”模块(请注意，这个类目是供后端用的，前端展示的类目需要单独再设计一个，并且让前端类目与后台类目进行映射)</p>
 <p>既然选择不同类目出现不同的商品属性，所以我们需要一个“属性”模块来设置不同的属性，并且让不同的属性与类目进行映射(在属性多的时候需要能对属性进行分组)，通过映射我们就能在选择类目的时候出现不同的商品属性。</p>
 <p>从上面我们就可以得出一个商品管理系统有的一些模块了：</p>
 <img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png" class="" title="商品管理模块结构">
-
 <p>为什么把品牌单独拿出来？遵守惯例做法吧(嘿嘿)，个人认为品牌作为一种属性应该放在属性中，但是品牌比较特殊，因为品牌是每个商品都会有的，而且一开始维护会比较频繁，所以拿出来单独作为一个模块。</p>
-<h2 id="四、模块简单介绍"><a href="#四、模块简单介绍" class="headerlink" title="四、模块简单介绍"></a>四、模块简单介绍</h2><ol>
+<h2 id="四、模块简单介绍">四、模块简单介绍</h2>
+<ol>
 <li>商品列表：</li>
 </ol>
 <p>“商品列表”是我们日常使用的界面，有筛选查询、编辑、上架、下架、删除、导出等功能；具体样式请见图例：</p>
 <img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.png" class="" title="商品列表">
-
 <p>在设计商品列表的时候需要根据考虑运营人员使用的便利性，例如常用搜索字段可放在外面，不常用的可放在高级检索内。</p>
 <ol start="2">
 <li>类目模块：</li>
 </ol>
 <p>用于类目维护的模块，包括新增、删除类目等。具体样式请见图例：</p>
 <img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E7%B1%BB%E7%9B%AE.png" class="" title="类目">
-
 <p>类目模块设计请根据公司系统或业务规模来，如果业务小等可将类目模块省去即类目确认后直接让开发小哥哥直接通过程序上传。</p>
 <ol start="3">
 <li>属性模块：</li>
 </ol>
 <p>用于属性维护的模块，包括新增、删除、编辑属性，并可将属性挂靠到类目。具体样式</p>
 <img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%B1%9E%E6%80%A7.png" class="" title="属性">
-
 <p>属性模块可大可小，大的话就有属性分组且属性值可事设置内容和类型等。小的就直接设置属性，属性值需在上传商品的时候自行填写。</p>
 <ol start="4">
 <li>品牌模块：</li>
 </ol>
 <p>用于管理品牌的模块，具体样式可见图例：</p>
 <img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%93%81%E7%89%8C.png" class="" title="品牌">
-
 <p>品牌模块一般比较标准且通用，但是展示方式和内容也可多可少，是否展示品牌图片和商品统计等依据公司业务来。</p>
 <ol start="5">
 <li>导入模块：</li>
 </ol>
 <p>用于商品新增、商品图片新增、商品信息更新、商品图片更新、品牌新增、品牌图片新增等的模块。</p>
-<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>看似复杂的商品管理系统，在当我们从系统使用的角度来看的时候，就会发现它也有章理可循，我们如何输入商品，输入商品的那些信息，这些信息是什么，这些信息应该怎么处理等等，当我们回答完这些问题的时候，关于商品管理系统的轮廓也有出来了，后面的事情就是根据公司的业务来决定系统功能的多少或从人员使用习惯的用户体验角度来确定页面布局和细节了。</p>
+<h2 id="五、总结">五、总结</h2>
+<p>看似复杂的商品管理系统，在当我们从系统使用的角度来看的时候，就会发现它也有章理可循，我们如何输入商品，输入商品的那些信息，这些信息是什么，这些信息应该怎么处理等等，当我们回答完这些问题的时候，关于商品管理系统的轮廓也有出来了，后面的事情就是根据公司的业务来决定系统功能的多少或从人员使用习惯的用户体验角度来确定页面布局和细节了。</p>
 
     </div>
 
@@ -527,6 +518,8 @@
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

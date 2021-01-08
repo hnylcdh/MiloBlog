@@ -23,26 +23,26 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="聊聊商品管理模块一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。   &lt; !–more–&gt;  基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。  关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、">
+<meta name="description" content="聊聊商品管理模块一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。  &lt; !–more–&gt;    基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。  关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不一样的角度看商品管理">
 <meta property="og:url" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/index.html">
 <meta property="og:site_name" content="MiloBlog">
-<meta property="og:description" content="聊聊商品管理模块一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。   &lt; !–more–&gt;  基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。  关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、">
+<meta property="og:description" content="聊聊商品管理模块一、本文前言以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成 个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。  &lt; !–more–&gt;    基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。  关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/01/07/FemJcuogvTzWqN6.png">
-<meta property="og:image" content="https://i.loli.net/2021/01/07/Tjw4LB3vYcXiWKg.png">
+<meta property="og:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png">
 <meta property="og:image" content="https://i.loli.net/2021/01/07/Apul25CGVUYM7D6.png">
 <meta property="og:image" content="https://i.loli.net/2021/01/07/VfGOx5KZdpgUW3l.png">
 <meta property="og:image" content="https://i.loli.net/2021/01/07/qLmWQ6eutn3p1yT.png">
 <meta property="og:image" content="https://i.loli.net/2021/01/07/LyVkoQh3T5ZY1Gi.png">
 <meta property="article:published_time" content="2021-01-06T18:39:56.000Z">
-<meta property="article:modified_time" content="2021-01-07T07:44:35.667Z">
+<meta property="article:modified_time" content="2021-01-08T08:31:58.304Z">
 <meta property="article:author" content="Milo">
 <meta property="article:tag" content="后台">
 <meta property="article:tag" content="商品管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/01/07/FemJcuogvTzWqN6.png">
+<meta name="twitter:image" content="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
 
 
 <link rel="canonical" href="https://milochu.com/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/">
@@ -285,7 +285,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-07 07:44:35" itemprop="dateModified" datetime="2021-01-07T07:44:35+00:00">2021-01-07</time>
+        <time title="修改时间：2021-01-08 08:31:58" itemprop="dateModified" datetime="2021-01-08T08:31:58+00:00">2021-01-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -334,8 +334,9 @@
 <h2 id="二、商品信息的组成"><a href="#二、商品信息的组成" class="headerlink" title="二、商品信息的组成"></a>二、商品信息的组成</h2><ol>
 <li>个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。</li>
 </ol>
-<p><img src="https://i.loli.net/2021/01/07/FemJcuogvTzWqN6.png" alt="商品信息结构"></p>
 <p>&lt; !–more–&gt;</p>
+<img src="/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png" class="" title="商品信息结构">
+
 <ol>
 <li><p>基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。</p>
 </li>
@@ -346,15 +347,15 @@
 <li><p>图片：分为商品主图和详情图</p>
 </li>
 </ol>
-<ol start="2">
+<ol>
 <li>关于单规格和多规格的商品信息：</li>
 </ol>
-<p>&lt; !–more–&gt;</p>
 <p>个人认为多规格是一个商品组合，可以让人们把有多共同商品信息的商品放在一起方便管理。现在多规格商品并不是真正意义的多规格商品，例如iphonexsmax256G银色和iphonexsmax64G深空灰，而是人们可以随意组合的商品组合(淘宝也是这样设计)，例如iphonexs和iphonexsmax，都会放在一个商品里。</p>
 <h2 id="三、商品管理系统模块组成"><a href="#三、商品管理系统模块组成" class="headerlink" title="三、商品管理系统模块组成"></a>三、商品管理系统模块组成</h2><p>商品信息组成的章节说到了商品信息的组成，同时不同商品需要的商品信息要素不一样，以及商品管理系统设计的时候需要考虑系统的扩展性、灵活性以及稳定性，所以我们不会把每个商品的商品信息表结构都做成一样的。而是通过一定的方式进行区分，那通过哪个商品信息要素来区分不同的商品使用不同的商品表结构呢？那就是类目，想必在我们一些商品系统或商城后台新增商品的时候，必须要先选类目，选完类目后才会进入下一步的商品信息输入操作，这就是根据类目来确定这个商品需要那些商品信息属性，例如选择数码类类目，则会出现像素、摄像头等属性，例如选择服装类类目，则会出现尺寸、颜色等要素。所以在设计商品系统的时候首先需要有一个“ 类目 ”模块(请注意，这个类目是供后端用的，前端展示的类目需要单独再设计一个，并且让前端类目与后台类目进行映射)</p>
 <p>既然选择不同类目出现不同的商品属性，所以我们需要一个“属性”模块来设置不同的属性，并且让不同的属性与类目进行映射(在属性多的时候需要能对属性进行分组)，通过映射我们就能在选择类目的时候出现不同的商品属性。</p>
 <p>从上面我们就可以得出一个商品管理系统有的一些模块了：</p>
-<p><img src="https://i.loli.net/2021/01/07/Tjw4LB3vYcXiWKg.png" alt="商品管理模块结构"></p>
+<img src="/2021/01/06/%E8%81%8A%E8%81%8A%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png" class="" title="商品管理模块结构">
+
 <p>为什么把品牌单独拿出来？遵守惯例做法吧(嘿嘿)，个人认为品牌作为一种属性应该放在属性中，但是品牌比较特殊，因为品牌是每个商品都会有的，而且一开始维护会比较频繁，所以拿出来单独作为一个模块。</p>
 <h2 id="四、模块简单介绍"><a href="#四、模块简单介绍" class="headerlink" title="四、模块简单介绍"></a>四、模块简单介绍</h2><ol>
 <li>商品列表：</li>

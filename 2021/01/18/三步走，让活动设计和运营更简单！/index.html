@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="三步走，让活动设计和运营更简单！ 做一个上线的活动容易，但是做一个上线的好活动则需要我们下更大的功夫，考虑更加的全面。本文通过把活动分成三个阶段来化繁为简，阐释不同活动阶段下应该思考和做的事情。  不同阶段需要做的事情各有侧重点，活动前侧重用户调研、确定活动形式等，活动中侧重于根据数据调整运营方式；活动后侧重总结，吸取经验于教训！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三步走，让活动设计和运营更简单！">
+<meta property="og:url" content="https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/index.html">
+<meta property="og:site_name" content="MiloBlog">
+<meta property="og:description" content="三步走，让活动设计和运营更简单！ 做一个上线的活动容易，但是做一个上线的好活动则需要我们下更大的功夫，考虑更加的全面。本文通过把活动分成三个阶段来化繁为简，阐释不同活动阶段下应该思考和做的事情。  不同阶段需要做的事情各有侧重点，活动前侧重用户调研、确定活动形式等，活动中侧重于根据数据调整运营方式；活动后侧重总结，吸取经验于教训！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/%E6%B4%BB%E5%8A%A8%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5.png">
+<meta property="article:published_time" content="2021-01-18T15:05:25.000Z">
+<meta property="article:modified_time" content="2021-01-18T07:12:31.120Z">
+<meta property="article:author" content="Milo">
+<meta property="article:tag" content="活动">
+<meta property="article:tag" content="运营">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/%E6%B4%BB%E5%8A%A8%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5.png">
+
+
+<link rel="canonical" href="https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>三步走，让活动设计和运营更简单！ | MiloBlog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186148280-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-186148280-1');
+      }
+    </script>
+
+
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "[object Object]"}'></script>
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">MiloBlog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">若blog不时常写，那就毫无意义！<br>———— Milo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">三步走，让活动设计和运营更简单！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%B4%BB%E5%8A%A8%E5%89%8D"><span class="nav-number">1.1.</span> <span class="nav-text">一、活动前</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%A1%AE%E5%AE%9A%E6%B4%BB%E5%8A%A8%E7%9B%AE%E7%9A%84"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">1.确定活动目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%A1%AE%E5%AE%9A%E6%B4%BB%E5%8A%A8%E6%97%B6%E9%97%B4"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">2.确定活动时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%A1%AE%E5%AE%9A%E6%B4%BB%E5%8A%A8%E8%B5%84%E6%BA%90"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">3.确定活动资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%A1%AE%E5%AE%9A%E6%B4%BB%E5%8A%A8%E5%8F%82%E4%B8%8E%E7%BE%A4%E4%BD%93-%E7%94%A8%E6%88%B7"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">4.确定活动参与群体(用户)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%A1%AE%E5%AE%9A%E6%8A%95%E6%94%BE%E6%B8%A0%E9%81%93"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">5.确定投放渠道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E7%A1%AE%E5%AE%9A%E6%B4%BB%E5%8A%A8%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">6.确定活动形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E7%A1%AE%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">7.确定数据埋点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%B4%BB%E5%8A%A8%E4%B8%AD"><span class="nav-number">1.2.</span> <span class="nav-text">二、活动中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%B4%BB%E5%8A%A8%E5%90%8E"><span class="nav-number">1.3.</span> <span class="nav-text">三、活动后</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Milo"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Milo</p>
+  <div class="site-description" itemprop="description">单身PM狗</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Milo">
+      <meta itemprop="description" content="单身PM狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MiloBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          三步走，让活动设计和运营更简单！
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-01-18 15:05:25 / 修改时间：07:12:31" itemprop="dateCreated datePublished" datetime="2021-01-18T15:05:25+00:00">2021-01-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">活动设计</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>三步走，让活动设计和运营更简单！</h1>
+<p>做一个上线的活动容易，但是做一个上线的好活动则需要我们下更大的功夫，考虑更加的全面。本文通过把活动分成三个阶段来化繁为简，阐释不同活动阶段下应该思考和做的事情。</p>
+<img src="/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/%E6%B4%BB%E5%8A%A8%E4%B8%89%E5%A4%A7%E9%98%B6%E6%AE%B5.png" class="" title="活动三大阶段">
+<p>不同阶段需要做的事情各有侧重点，活动前侧重用户调研、确定活动形式等，活动中侧重于根据数据调整运营方式；活动后侧重总结，吸取经验于教训！</p>
+<a id="more"></a>
+<h2 id="一、活动前">一、活动前</h2>
+<p>这是最重要的一个阶段，决定了活动的成败！本文把“活动前”要做的事情分为7个部份：</p>
+<h4 id="1-确定活动目的">1.确定活动目的</h4>
+<p>天下熙熙，皆为利来；天下攘攘，皆为利往。无利不起早，百事利当先。做事情总有个动机。活动为了拉新、促活还是为了留存，抑或为了提升收益？确定目标后才能有的放矢，要拉新就不要太考虑促活；要促活就不要太考虑收益；虽然拉新、促活、留存是环环相扣，但是不同群体的活动方式有很大的不同。</p>
+<ul>
+<li>拉新：目标是通过活动带来新用户；获客成本越小约好，LTV越大越好。</li>
+<li>促活：目标是让用户更加活跃，通过提升活跃度带同其他业务指标的提升；促活成本越小越好好，带来的收益越大越好</li>
+<li>留存：目标是减少新老用户的流失，通过减少流失来业务全方面的提升；</li>
+<li>收益：目标是提升业务付费相关指标，例如：订单量、会员量等。</li>
+</ul>
+<h4 id="2-确定活动时间">2.确定活动时间</h4>
+<p>确定活动时间对于活动准备工作很重要，活动准备时间越长准备越充分，我们可以有更多时间用于思考、讨论；反之活动必将匆忙上线。</p>
+<p>最好的活动安排是制定全年活动计划表，既能俯瞰全年活动，又能有节奏的策划、开发、运营活动。如果没有全年活动计划表也无需苦恼，只要我们能尽可能提前想到要做的活动，尽可能留有更多的时间来设计活动，也可提升活动的成功率。对于老板今天提出活动想法，后天活动上线的需求，按照本文三个阶段操作后，接下来可听天命，即使活动效果不理想，也不要自怨自艾，没有人可以2-3天上线一个好活动。</p>
+<h4 id="3-确定活动资源">3.确定活动资源</h4>
+<p>活动资源(人力、物力、财力)影响着活动规模和活动效果；决定了是轰轰烈烈还是小而美。资源多可以给到用户更多利益，带来更好的效果；资源少意味着可减少开发周期；资源少也意味着不能通过直接而实惠的利益让用户迅速的产生行动。 1万块预算，我们或许只可以搞个抽奖送一个手机，10万块预算我们可以划分多个等级的奖品。</p>
+<p>曾经有过年度活动摆在我们面前，但是由于没有预算，我们直接取消了！</p>
+<h4 id="4-确定活动参与群体-用户">4.确定活动参与群体(用户)</h4>
+<p>4.1、虽然参与活动的用户越多越好，但我们需要认清一个现实：不可能有100%的参与率，也不是所有用户群体都会参与；因此我们在设计活动的时应先尽量把用户群缩小，如有其他需要则再辐射其他用户群。确定活动目标只是一个开始，在策划活动之前还需要确定期望或预计参与活动的群体,例如：</p>
+<ul>
+<li>当设计一个外部渠道的拉新活动时，我们就不需要去重点考虑已有的老用户，应该把精力放在研究外部外部渠道用户的年龄、喜好等方面，思考如何让新用户成为注册用户；</li>
+<li>当设计一个内部拉进活动时，我们就需要研究老用户，老带新；没有足够动力，老用户不会带来新用户。</li>
+</ul>
+<p>以上2个例子可让我们知道，不先确定活动的参与对象，对后续活动设计会产生误导，导致活动与期望参与的用户群不匹配，从而做出一个失败的活动。</p>
+<p>4.2、也有一些情况不需要特别考虑活动参与群体，例如大型节日活动(五一、十一)，电商节日(618、双十一)；这些活动对群体本身没有很大的限制性，更希望所有用户群体都能参与。</p>
+<h4 id="5-确定投放渠道">5.确定投放渠道</h4>
+<p>投放渠道和活动对象其实是相辅相成的，但是大多数产品人做活动基本都在自家的产品体系中，要么是自家APP，要么是自家网站，不过本文还是把渠道分成了两类：</p>
+<ul>
+<li>外部渠道：与第三方合作进行资源位互换的或直接在第三方渠道投放的，大型节日活动、拉新活动等可能会从第三方引流。</li>
+<li>内部渠道：自家软件的各个入口，例如APP弹窗，页面的banner，任务入口等。</li>
+</ul>
+<p>其实确定活动参与对象后，我们根据渠道的表现效果来进行选择。如果没有做过渠道的表现效果统计，不妨可先做一次调研，看看入口以往的曝光、点击量、点击人群，点击转化率，以及到业务最后的转化率等。</p>
+<h4 id="6-确定活动形式">6.确定活动形式</h4>
+<p>通过前面的思考和讨论，我们已经知道了这个活动的目的，活动参与对象等，那就依据这些来设计活动，制作原型，完善交互。举几个例子：</p>
+<ul>
+<li>年终账单：通过一个个页面来引导用户往下查看，数据展示、UI美观程度则比较重要</li>
+<li>秒杀：通过商品、文案和价格刺激来吸引用户快速下单，减少操作步骤和页面</li>
+<li>抽奖：通过直观的“点击抽奖”来直接刺激用户点击，减少页面文字说明</li>
+</ul>
+<h4 id="7-确定数据埋点">7.确定数据埋点</h4>
+<p>在制作原型的时候，需要考虑好数据统计的模板，依据此模板来进行数据埋点；如果是自动化埋点，则不需要多考虑，该有的数据都会有。</p>
+<p>一般活动的分析方式是漏斗，统计每个页面的曝光和关键点击就能得出一个比较好的漏斗报表；但是如果是多入口的，建议在入口和最终结果页面划分渠道统计，这样做的好处是方便统计入口效果，供以后参考；而且也能对活动效果的评估起到一定的参考。</p>
+<h2 id="二、活动中">二、活动中</h2>
+<p>相比“活动前”，“活动中”这个阶段我认为更有意思，这是一个验证的阶段。我们要做的只有1件事情，即统计数据、分析和调整。记住，这是一件事情！</p>
+<p>2.1、入口分析</p>
+<p>每天按照活动数据表格统计出昨日的活动数据，分析各渠道或各活动入口的数据漏斗，对比转化率；如果转化率高则可增加曝光和刺激手段，吸引更多的用户进来；若转化率低的入口可分析原因并作出调整。 本文列出以下几个方面来分析原因：</p>
+<ul>
+<li>用户群匹配：该活动入口的用户群是否是我们预想的用户群体；从此入口进入的点击和转化都不高，可以考虑下了，为其他业务让路。</li>
+<li>banner不够吸引人：banner不够吸引人或者用户未能接收到我们传递的活动想法，用户就不会点击进来；有的人会想banner不就是一张图吗？这其实不对的，banner是通过图文结合来传递信息，信息传达不到位则减少点击量</li>
+</ul>
+<p>2.2、页面分析</p>
+<p>通过页面曝光数、页面事件点击数，或者页面热力图，页面停留市场来分析页面的吸引程度和交互效果。</p>
+<p>查看页面数据后，我们可能会有一些疑问，例如用户为什么页面热力图上半部分红，页面下面的一些按钮却没点？ 为什么用户停留时间这么短？…，本文列出以下几个方面来分析原因：</p>
+<ul>
+<li>UI设计不够吸引人：人靠衣装，活动靠UI装，一个精美的UI设计会让用户有欲望浏览</li>
+<li>页面文案说明复杂，不清晰：用户想通过页面了解活动玩法困难，可能就直接走人</li>
+<li>交互不人性化：按钮点击无反馈、或者点击后加载时间过长，用户不愿意等待可能会直接离开；按钮放在用户单手可能不方便操作的区域或者按钮太小，用户无法点击就走人</li>
+</ul>
+<p>2.3、其他</p>
+<p>如果没什么问题，那就继续观察数据，或调整活动内容。如果抽奖，可以对小奖品、优惠券之类进行替换。</p>
+<h2 id="三、活动后">三、活动后</h2>
+<p>“活动中”阶段的数据分析已经帮我们做了很大一部分活动总结。活动结束后，我们需要再整体回顾一遍数据，看看是否有遗漏的地方没有分析出结果来，或者有一些数据不是没有观察到，之后整理出一份word总结或者ppt总结，把活动的经验沉淀下来，供其他活动或后续同事参考！</p>
+<p>如你有不同想法，可留言让大家一起讨论！</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Milo
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/" title="三步走，让活动设计和运营更简单！">https://milochu.com/2021/01/18/三步走，让活动设计和运营更简单！/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%B4%BB%E5%8A%A8/" rel="tag"><i class="fa fa-tag"></i> 活动</a>
+              <a href="/tags/%E8%BF%90%E8%90%A5/" rel="tag"><i class="fa fa-tag"></i> 运营</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/01/06/%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(OMS)%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E8%BF%99%E4%BA%9B/" rel="next" title="关于订单管理系统(OMS)，你需要知道这些">
+                  关于订单管理系统(OMS)，你需要知道这些 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Milo</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://milochu.com/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/";
+    this.page.identifier = "2021/01/18/三步走，让活动设计和运营更简单！/";
+    this.page.title = "三步走，让活动设计和运营更简单！";
+    };
+  NexT.utils.loadComments('#disqus_thread', () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pmmilo.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

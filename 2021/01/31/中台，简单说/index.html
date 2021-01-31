@@ -24,29 +24,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="一、本文前言 以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成  个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
+<meta name="description" content="公司有中台很久了，突然想写一篇文章聊聊笔者自身对中台的定义和看法，也供大家讨论讨论。 一、什么是中台 现在有很多关于中台的解释或定义，也把中台划分了几个种类，分别是：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从整体角度看商品管理模块">
-<meta property="og:url" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/index.html">
+<meta property="og:title" content="中台，简单说!">
+<meta property="og:url" content="https://milochu.com/2021/01/31/%E4%B8%AD%E5%8F%B0%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AF%B4/index.html">
 <meta property="og:site_name" content="MiloBlog">
-<meta property="og:description" content="一、本文前言 以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成  个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
+<meta property="og:description" content="公司有中台很久了，突然想写一篇文章聊聊笔者自身对中台的定义和看法，也供大家讨论讨论。 一、什么是中台 现在有很多关于中台的解释或定义，也把中台划分了几个种类，分别是：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E7%B1%BB%E7%9B%AE.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%B1%9E%E6%80%A7.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%93%81%E7%89%8C.png">
-<meta property="article:published_time" content="2021-01-06T18:39:56.000Z">
+<meta property="article:published_time" content="2021-01-31T19:34:10.000Z">
 <meta property="article:modified_time" content="2021-01-31T11:38:07.216Z">
 <meta property="article:author" content="Milo">
 <meta property="article:tag" content="后台">
-<meta property="article:tag" content="商品管理">
+<meta property="article:tag" content="中台">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
 
 
-<link rel="canonical" href="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/">
+<link rel="canonical" href="https://milochu.com/2021/01/31/%E4%B8%AD%E5%8F%B0%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AF%B4/">
 
 
 <script class="page-configurations">
@@ -58,7 +51,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>从整体角度看商品管理模块 | MiloBlog</title>
+<title>中台，简单说! | MiloBlog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186148280-1"></script>
     <script>
@@ -188,7 +181,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9C%AC%E6%96%87%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">一、本文前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">二、商品信息的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97%E7%BB%84%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">三、商品管理系统模块组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%A8%A1%E5%9D%97%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.</span> <span class="nav-text">四、模块简单介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">五、总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AD%E5%8F%B0"><span class="nav-number">1.</span> <span class="nav-text">一、什么是中台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%AD%E5%8F%B0%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">二、中台能做什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%85%B1%E4%BA%AB"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.共享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%85%B1%E7%94%A8"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.共用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BF%9E%E6%8E%A5"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.0.4.</span> <span class="nav-text">4.服务</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%A6%81%E4%B8%8D%E8%A6%81%E5%81%9A%E4%B8%AD%E5%8F%B0"><span class="nav-number">3.</span> <span class="nav-text">三、要不要做中台</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -259,7 +252,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="https://milochu.com/2021/01/31/%E4%B8%AD%E5%8F%B0%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AF%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -272,7 +265,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          从整体角度看商品管理模块
+          中台，简单说!
         </h1>
 
         <div class="post-meta-container">
@@ -282,16 +275,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-01-06 18:39:56" itemprop="dateCreated datePublished" datetime="2021-01-06T18:39:56+00:00">2021-01-06</time>
+      <time title="创建时间：2021-01-31 19:34:10 / 修改时间：11:38:07" itemprop="dateCreated datePublished" datetime="2021-01-31T19:34:10+00:00">2021-01-31</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-31 11:38:07" itemprop="dateModified" datetime="2021-01-31T11:38:07+00:00">2021-01-31</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -310,14 +297,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -328,69 +315,46 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一、本文前言">一、本文前言</h2>
-<p>以前做过商品管理系统，最近想写出来看看！！！！</p>
-<h2 id="二、商品信息的组成">二、商品信息的组成</h2>
-<ol>
-<li>个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。</li>
-</ol>
+        <p>公司有中台很久了，突然想写一篇文章聊聊笔者自身对中台的定义和看法，也供大家讨论讨论。</p>
+<h2 id="一、什么是中台">一、什么是中台</h2>
+<p>现在有很多关于中台的解释或定义，也把中台划分了几个种类，分别是：</p>
 <a id="more"></a>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png" class="" title="商品信息结构">
+<ul>
+<li>业务中台：提供一些复用服务，如用户中心、订单管理等</li>
+<li>数据中台：提供数据分析能力，解决数据分析相关的难题等</li>
+<li>应用中台：提供一些基础应用，如消息推送，短信发送等</li>
+<li>算法中台：提供一些算法能力，如证件识别算法</li>
+<li>研发中台：提供一些部分技术和后台支撑，例如代码测试、代码发布等系统</li>
+<li>技术中台：提供一些基础设施资源、例如数据存储、计算、网络等，是较为底层的技术。</li>
+<li>组织中台：提供或协调一些组织资源，例如资源调度、资源协调、风险把控等</li>
+</ul>
+<p>每个种类都有大厂(阿里巴巴、腾讯、京东、平安等)图例来解释他们的中台的样子，但是这样对于产品新人或想要了解中台的人比较困难，因为大厂的图例都是依据各自企业的业务、架构等形态来画的，带有明显的企业烙印，如果不了解企业业务或其组织架构就比较难理解。</p>
+<p>笔者从自己经历中总结了中台，并给出了一个定义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">中台是一个能共享、共用、连接、服务企业各能力的“中间商”。</span><br></pre></td></tr></table></figure>
+<h2 id="二、中台能做什么">二、中台能做什么</h2>
+<p>既然是“中间商”，且起到支撑作用，那应该具有共享、共用、连接、服务的属性。因此从这四个方面阐述中台的作用。</p>
+<h4 id="1-共享">1.共享</h4>
+<p>企业不同业务或不同部门可以通过中台来共享各类资源和数据，例如业务数据、用户数据等。数据数据后，小到一个功能的开发需求的分析，大到企业战略的制定，都可以从中台获取数据并分析，获取决策的数据支撑。</p>
+<p>目前最广泛共享的是用户相关的数据。企业一般以手机号作为唯一标识来确认用户，一个手机号一个用户，其他的设备号等都是辅助来确认是不是一个用户。企业各业务的用户数据最终在中台都根据手机号来存储。</p>
+<h4 id="2-共用">2.共用</h4>
+<p>企业可以通过中台来共用各类基础设施和服务，例如登录服务、消息推送服务、短信发送服务、代码发布服务务、运维服务、iT支持服务等。</p>
+<p>通过消息推送案例阐述下共用：</p>
+<p>一般小型企业可能就一个业务，因此做一个推送服务根据自身业务和用户群体来做消息推送的功能，或者直接用第三方的消息推送服务，这样做的好处是节省开发成本和时间，同时由于业务不大，不需要太多复杂的功能，如果用第三方也能满足需求。 但是对于大中型企业，业务多且分散于不同部门(事业线或事业部)，各方可能都有开发团队，那如果每个团队都自己做一套消息推送服务就会特别浪费企业资源，但是由一方开发后其他方使用又不能满足其他方的个性化需求，另外成本如果核算等也是一个问题，因此放到一个独立的团队来开发消息推送基础功能，各业务团队在基础功能上开发个性化功能，那就大大减少资源的浪费，同时也能让业务减少在这方面的时间消耗，放更多的精力的在业务发展上。</p>
+<p>再详细说下消息推送服务基础服务和个性化的区别，以订单发货提醒为例，中台提供各类消息推送通道(push、短信、邮件等)以及是否要消息推送和通知的判断，由业务方自行去对接需要消息推送的通道，有的业务只要push，有的业务短信也需要。对接后再满足条件时候进行消息推送即可。</p>
+<p>以上说明就可以看出中台的演变过程(随着企业发展必然会有一些功能可以集中到某一个团队开发)以及中台的作用。</p>
+<h4 id="3-连接">3.连接</h4>
+<p>中台可以作为是一个通道，可以打通不同业务、部门、后台之间的业务壁垒，方便企业整合业务，方便不同业务之间的互相赋能，实现1+1&gt;2的增长。</p>
+<p>试想下此场景：当A业务发现某用户群的特征非常符合B业务的目标用户，想进行业务合作的尝试，如果业务之间各自独立，没有打通的地方，那就需要新对接(例如联合登录)，等待上线可能是1-2周后，热头劲都过来，而且上线运营后数据也不方便统计和分析；如果业务之间有打通(共用了登录模块，共享了数据)，那就能立即上线运营，同时能多维度的统计和分析数据。</p>
+<h4 id="4-服务">4.服务</h4>
+<p>既然是“中间商”，笔者认为就应该有“服务意识”，支撑好前台业务发展，为各业务发展提供有利帮助。</p>
+<h2 id="三、要不要做中台">三、要不要做中台</h2>
+<p>关于要不要做中台，很多文章都进行了说明，本文不再细聊，而是给出几个关键词供产品新人或想要了解中台的同学进行思考和讨论：</p>
 <ol>
-<li>
-<p>基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。</p>
-</li>
-<li>
-<p>关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、规格、价格、条形码、货号、库存等</p>
-</li>
-<li>
-<p>补充信息：商品描述、保质期、物流模板、毛重、净重等。</p>
-</li>
-<li>
-<p>图片：分为商品主图和详情图</p>
-</li>
+<li>业务数量：业务数量和团队数量两者之间相辅相成，业务少，团队少，开发相同功能的机率也小。</li>
+<li>企业规模：企业规模越大，业务越多，开发团队越多，共用的功能也就会越多；反之则少。</li>
+<li>营收：如果要设立中台，就需要供养单独的团队，且这个团队不直接贡献营收；</li>
+<li>发展瓶颈：如业务发展到一定规模，发现业务之间有壁垒，打通后可产生更多效益，是不是应该考虑设立中台进行数据等的打通呢？</li>
 </ol>
-<ol>
-<li>关于单规格和多规格的商品信息：</li>
-</ol>
-<p>个人认为多规格是一个商品组合，可以让人们把有多共同商品信息的商品放在一起方便管理。现在多规格商品并不是真正意义的多规格商品，例如iphonexsmax256G银色和iphonexsmax64G深空灰，而是人们可以随意组合的商品组合(淘宝也是这样设计)，例如iphonexs和iphonexsmax，都会放在一个商品里。</p>
-<h2 id="三、商品管理系统模块组成">三、商品管理系统模块组成</h2>
-<p>商品信息组成的章节说到了商品信息的组成，同时不同商品需要的商品信息要素不一样，以及商品管理系统设计的时候需要考虑系统的扩展性、灵活性以及稳定性，所以我们不会把每个商品的商品信息表结构都做成一样的。而是通过一定的方式进行区分，那通过哪个商品信息要素来区分不同的商品使用不同的商品表结构呢？那就是类目，想必在我们一些商品系统或商城后台新增商品的时候，必须要先选类目，选完类目后才会进入下一步的商品信息输入操作，这就是根据类目来确定这个商品需要那些商品信息属性，例如选择数码类类目，则会出现像素、摄像头等属性，例如选择服装类类目，则会出现尺寸、颜色等要素。所以在设计商品系统的时候首先需要有一个“ 类目 ”模块(请注意，这个类目是供后端用的，前端展示的类目需要单独再设计一个，并且让前端类目与后台类目进行映射)</p>
-<p>既然选择不同类目出现不同的商品属性，所以我们需要一个“属性”模块来设置不同的属性，并且让不同的属性与类目进行映射(在属性多的时候需要能对属性进行分组)，通过映射我们就能在选择类目的时候出现不同的商品属性。</p>
-<p>从上面我们就可以得出一个商品管理系统有的一些模块了：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png" class="" title="商品管理模块结构">
-<p>为什么把品牌单独拿出来？遵守惯例做法吧(嘿嘿)，个人认为品牌作为一种属性应该放在属性中，但是品牌比较特殊，因为品牌是每个商品都会有的，而且一开始维护会比较频繁，所以拿出来单独作为一个模块。</p>
-<h2 id="四、模块简单介绍">四、模块简单介绍</h2>
-<ol>
-<li>商品列表：</li>
-</ol>
-<p>“商品列表”是我们日常使用的界面，有筛选查询、编辑、上架、下架、删除、导出等功能；具体样式请见图例：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.png" class="" title="商品列表">
-<p>在设计商品列表的时候需要根据考虑运营人员使用的便利性，例如常用搜索字段可放在外面，不常用的可放在高级检索内。</p>
-<ol start="2">
-<li>类目模块：</li>
-</ol>
-<p>用于类目维护的模块，包括新增、删除类目等。具体样式请见图例：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E7%B1%BB%E7%9B%AE.png" class="" title="类目">
-<p>类目模块设计请根据公司系统或业务规模来，如果业务小等可将类目模块省去即类目确认后直接让开发小哥哥直接通过程序上传。</p>
-<ol start="3">
-<li>属性模块：</li>
-</ol>
-<p>用于属性维护的模块，包括新增、删除、编辑属性，并可将属性挂靠到类目。具体样式</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%B1%9E%E6%80%A7.png" class="" title="属性">
-<p>属性模块可大可小，大的话就有属性分组且属性值可事设置内容和类型等。小的就直接设置属性，属性值需在上传商品的时候自行填写。</p>
-<ol start="4">
-<li>品牌模块：</li>
-</ol>
-<p>用于管理品牌的模块，具体样式可见图例：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%93%81%E7%89%8C.png" class="" title="品牌">
-<p>品牌模块一般比较标准且通用，但是展示方式和内容也可多可少，是否展示品牌图片和商品统计等依据公司业务来。</p>
-<ol start="5">
-<li>导入模块：</li>
-</ol>
-<p>用于商品新增、商品图片新增、商品信息更新、商品图片更新、品牌新增、品牌图片新增等的模块。</p>
-<h2 id="五、总结">五、总结</h2>
-<p>看似复杂的商品管理系统，在当我们从系统使用的角度来看的时候，就会发现它也有章理可循，我们如何输入商品，输入商品的那些信息，这些信息是什么，这些信息应该怎么处理等等，当我们回答完这些问题的时候，关于商品管理系统的轮廓也有出来了，后面的事情就是根据公司的业务来决定系统功能的多少或从人员使用习惯的用户体验角度来确定页面布局和细节了。</p>
 
     </div>
 
@@ -408,7 +372,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/" title="从整体角度看商品管理模块">https://milochu.com/2021/01/06/从整体角度看商品管理模块/</a>
+      <a href="https://milochu.com/2021/01/31/%E4%B8%AD%E5%8F%B0%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AF%B4/" title="中台，简单说!">https://milochu.com/2021/01/31/中台，简单说/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -418,20 +382,17 @@
 
           <div class="post-tags">
               <a href="/tags/%E5%90%8E%E5%8F%B0/" rel="tag"><i class="fa fa-tag"></i> 后台</a>
-              <a href="/tags/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 商品管理</a>
+              <a href="/tags/%E4%B8%AD%E5%8F%B0/" rel="tag"><i class="fa fa-tag"></i> 中台</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/06/%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(OMS)%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E8%BF%99%E4%BA%9B/" rel="prev" title="关于订单管理系统(OMS)，你需要知道这些">
-                  <i class="fa fa-chevron-left"></i> 关于订单管理系统(OMS)，你需要知道这些
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/12/27/%E5%B9%B4%E7%BB%88%E8%B4%A6%E5%8D%95%E6%80%8E%E4%B9%88%E5%81%9A%E6%89%8D%E5%90%B8%E5%BC%95%E4%BA%BA/" rel="next" title="年终账单应该怎么做才能吸引人？">
-                  年终账单应该怎么做才能吸引人？ <i class="fa fa-chevron-right"></i>
+                <a href="/2021/01/18/%E4%B8%89%E6%AD%A5%E8%B5%B0%EF%BC%8C%E8%AE%A9%E6%B4%BB%E5%8A%A8%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%BF%90%E8%90%A5%E6%9B%B4%E7%AE%80%E5%8D%95%EF%BC%81/" rel="next" title="三步走，让活动设计和运营更简单！">
+                  三步走，让活动设计和运营更简单！ <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -547,9 +508,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/";
-    this.page.identifier = "2021/01/06/从整体角度看商品管理模块/";
-    this.page.title = "从整体角度看商品管理模块";
+    this.page.url = "https://milochu.com/2021/01/31/%E4%B8%AD%E5%8F%B0%EF%BC%8C%E7%AE%80%E5%8D%95%E8%AF%B4/";
+    this.page.identifier = "2021/01/31/中台，简单说/";
+    this.page.title = "中台，简单说!";
     };
   NexT.utils.loadComments('#disqus_thread', () => {
     if (window.DISQUS) {

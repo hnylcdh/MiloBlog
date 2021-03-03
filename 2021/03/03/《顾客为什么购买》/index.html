@@ -24,29 +24,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="一、本文前言 以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成  个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
+<meta name="description" content="一、商店鲜为人知的小秘密 将影响人们购物的外在因素与人们日常的行为习惯相匹配，使人们在购物时得心应手。商店的所有变化，都是为了使购物环境对顾客更友好，遵循人的生理结构， 并适应不同年龄和性别购物者的行为差异。 1.出入口的位置、热销商品的摆放 靠右行驶&#x2F;走路地区的用户，往往更会挑选右边的东西，因此商场&#x2F;超市在扶梯之类放东西都是靠右放 2.缓冲地带 人们进入超市不会立即购物，而是需要切换场景，比如从">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从整体角度看商品管理模块">
-<meta property="og:url" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/index.html">
+<meta property="og:title" content="《顾客为什么购买》">
+<meta property="og:url" content="https://milochu.com/2021/03/03/%E3%80%8A%E9%A1%BE%E5%AE%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%AD%E4%B9%B0%E3%80%8B/index.html">
 <meta property="og:site_name" content="MiloBlog">
-<meta property="og:description" content="一、本文前言 以前做过商品管理系统，最近想写出来看看！！！！ 二、商品信息的组成  个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。">
+<meta property="og:description" content="一、商店鲜为人知的小秘密 将影响人们购物的外在因素与人们日常的行为习惯相匹配，使人们在购物时得心应手。商店的所有变化，都是为了使购物环境对顾客更友好，遵循人的生理结构， 并适应不同年龄和性别购物者的行为差异。 1.出入口的位置、热销商品的摆放 靠右行驶&#x2F;走路地区的用户，往往更会挑选右边的东西，因此商场&#x2F;超市在扶梯之类放东西都是靠右放 2.缓冲地带 人们进入超市不会立即购物，而是需要切换场景，比如从">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E7%B1%BB%E7%9B%AE.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%B1%9E%E6%80%A7.png">
-<meta property="og:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%93%81%E7%89%8C.png">
-<meta property="article:published_time" content="2021-01-06T18:39:56.000Z">
-<meta property="article:modified_time" content="2021-03-03T10:01:04.232Z">
+<meta property="article:published_time" content="2021-03-03T17:55:43.000Z">
+<meta property="article:modified_time" content="2021-03-03T10:01:04.224Z">
 <meta property="article:author" content="Milo">
-<meta property="article:tag" content="后台">
-<meta property="article:tag" content="商品管理">
+<meta property="article:tag" content="用户心理">
+<meta property="article:tag" content="书籍">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png">
 
 
-<link rel="canonical" href="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/">
+<link rel="canonical" href="https://milochu.com/2021/03/03/%E3%80%8A%E9%A1%BE%E5%AE%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%AD%E4%B9%B0%E3%80%8B/">
 
 
 <script class="page-configurations">
@@ -58,7 +51,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>从整体角度看商品管理模块 | MiloBlog</title>
+<title>《顾客为什么购买》 | MiloBlog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186148280-1"></script>
     <script>
@@ -188,7 +181,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9C%AC%E6%96%87%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">一、本文前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">二、商品信息的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97%E7%BB%84%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">三、商品管理系统模块组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%A8%A1%E5%9D%97%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.</span> <span class="nav-text">四、模块简单介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">五、总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%95%86%E5%BA%97%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E7%9A%84%E5%B0%8F%E7%A7%98%E5%AF%86"><span class="nav-number">1.</span> <span class="nav-text">一、商店鲜为人知的小秘密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%BA%E5%85%A5%E5%8F%A3%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%80%81%E7%83%AD%E9%94%80%E5%95%86%E5%93%81%E7%9A%84%E6%91%86%E6%94%BE"><span class="nav-number">1.1.</span> <span class="nav-text">1.出入口的位置、热销商品的摆放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BC%93%E5%86%B2%E5%9C%B0%E5%B8%A6"><span class="nav-number">1.2.</span> <span class="nav-text">2.缓冲地带</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%A3%E6%94%BE%E5%8F%8C%E6%89%8B"><span class="nav-number">1.3.</span> <span class="nav-text">3.解放双手</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%8D%E5%90%8C%E7%BE%A4%E4%BD%93%E5%AE%A2%E6%88%B7"><span class="nav-number">2.</span> <span class="nav-text">二、不同群体客户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%94%B7%E4%BA%BA"><span class="nav-number">2.1.</span> <span class="nav-text">1.男人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%A5%B3%E4%BA%BA"><span class="nav-number">2.2.</span> <span class="nav-text">2.女人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%80%81%E4%BA%BA"><span class="nav-number">2.3.</span> <span class="nav-text">3.老人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%B0%8F%E5%AD%A9"><span class="nav-number">2.4.</span> <span class="nav-text">4.小孩</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%84%9F%E5%AE%98%E5%AF%B9%E8%B4%AD%E7%89%A9%E6%AC%B2%E6%9C%9B%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">3.</span> <span class="nav-text">三、感官对购物欲望的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%A7%A6%E8%A7%89"><span class="nav-number">3.1.</span> <span class="nav-text">1.触觉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%97%85%E8%A7%89"><span class="nav-number">3.2.</span> <span class="nav-text">2.嗅觉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%86%E8%A7%89"><span class="nav-number">3.3.</span> <span class="nav-text">3.视觉</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BA%92%E8%81%94%E7%BD%91%E8%B4%AD%E7%89%A9%E7%9A%84%E5%89%8D%E6%99%AF"><span class="nav-number">4.</span> <span class="nav-text">四、互联网购物的前景</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -259,7 +252,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="https://milochu.com/2021/03/03/%E3%80%8A%E9%A1%BE%E5%AE%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%AD%E4%B9%B0%E3%80%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -272,7 +265,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          从整体角度看商品管理模块
+          《顾客为什么购买》
         </h1>
 
         <div class="post-meta-container">
@@ -282,23 +275,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-01-06 18:39:56" itemprop="dateCreated datePublished" datetime="2021-01-06T18:39:56+00:00">2021-01-06</time>
+      <time title="创建时间：2021-03-03 17:55:43 / 修改时间：10:01:04" itemprop="dateCreated datePublished" datetime="2021-03-03T17:55:43+00:00">2021-03-03</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-03 10:01:04" itemprop="dateModified" datetime="2021-03-03T10:01:04+00:00">2021-03-03</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%90%8E%E5%8F%B0%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">后台设计</span></a>
+          <a href="/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">产品设计</span></a>
         </span>
     </span>
 
@@ -310,7 +297,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>894</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -328,69 +315,34 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="一、本文前言">一、本文前言</h2>
-<p>以前做过商品管理系统，最近想写出来看看！！！！</p>
-<h2 id="二、商品信息的组成">二、商品信息的组成</h2>
-<ol>
-<li>个人认为系统中的商品由文字信息+图片组成；文字信息又分为基础(关键)信息+补充信息。</li>
-</ol>
-<a id="more"></a>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF%E7%BB%93%E6%9E%84.png" class="" title="商品信息结构">
-<ol>
-<li>
-<p>基础信息：表现商品唯一性的一些信息，没有这些信息就没有商品，例如商品唯一编码，商品名称。</p>
-</li>
-<li>
-<p>关键信息：丰富商品信息且方便系统进行管理统计的信息，例如类目、属性、品牌、产地、单位、规格、价格、条形码、货号、库存等</p>
-</li>
-<li>
-<p>补充信息：商品描述、保质期、物流模板、毛重、净重等。</p>
-</li>
-<li>
-<p>图片：分为商品主图和详情图</p>
-</li>
-</ol>
-<ol>
-<li>关于单规格和多规格的商品信息：</li>
-</ol>
-<p>个人认为多规格是一个商品组合，可以让人们把有多共同商品信息的商品放在一起方便管理。现在多规格商品并不是真正意义的多规格商品，例如iphonexsmax256G银色和iphonexsmax64G深空灰，而是人们可以随意组合的商品组合(淘宝也是这样设计)，例如iphonexs和iphonexsmax，都会放在一个商品里。</p>
-<h2 id="三、商品管理系统模块组成">三、商品管理系统模块组成</h2>
-<p>商品信息组成的章节说到了商品信息的组成，同时不同商品需要的商品信息要素不一样，以及商品管理系统设计的时候需要考虑系统的扩展性、灵活性以及稳定性，所以我们不会把每个商品的商品信息表结构都做成一样的。而是通过一定的方式进行区分，那通过哪个商品信息要素来区分不同的商品使用不同的商品表结构呢？那就是类目，想必在我们一些商品系统或商城后台新增商品的时候，必须要先选类目，选完类目后才会进入下一步的商品信息输入操作，这就是根据类目来确定这个商品需要那些商品信息属性，例如选择数码类类目，则会出现像素、摄像头等属性，例如选择服装类类目，则会出现尺寸、颜色等要素。所以在设计商品系统的时候首先需要有一个“ 类目 ”模块(请注意，这个类目是供后端用的，前端展示的类目需要单独再设计一个，并且让前端类目与后台类目进行映射)</p>
-<p>既然选择不同类目出现不同的商品属性，所以我们需要一个“属性”模块来设置不同的属性，并且让不同的属性与类目进行映射(在属性多的时候需要能对属性进行分组)，通过映射我们就能在选择类目的时候出现不同的商品属性。</p>
-<p>从上面我们就可以得出一个商品管理系统有的一些模块了：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E7%BB%93%E6%9E%84.png" class="" title="商品管理模块结构">
-<p>为什么把品牌单独拿出来？遵守惯例做法吧(嘿嘿)，个人认为品牌作为一种属性应该放在属性中，但是品牌比较特殊，因为品牌是每个商品都会有的，而且一开始维护会比较频繁，所以拿出来单独作为一个模块。</p>
-<h2 id="四、模块简单介绍">四、模块简单介绍</h2>
-<ol>
-<li>商品列表：</li>
-</ol>
-<p>“商品列表”是我们日常使用的界面，有筛选查询、编辑、上架、下架、删除、导出等功能；具体样式请见图例：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.png" class="" title="商品列表">
-<p>在设计商品列表的时候需要根据考虑运营人员使用的便利性，例如常用搜索字段可放在外面，不常用的可放在高级检索内。</p>
-<ol start="2">
-<li>类目模块：</li>
-</ol>
-<p>用于类目维护的模块，包括新增、删除类目等。具体样式请见图例：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E7%B1%BB%E7%9B%AE.png" class="" title="类目">
-<p>类目模块设计请根据公司系统或业务规模来，如果业务小等可将类目模块省去即类目确认后直接让开发小哥哥直接通过程序上传。</p>
-<ol start="3">
-<li>属性模块：</li>
-</ol>
-<p>用于属性维护的模块，包括新增、删除、编辑属性，并可将属性挂靠到类目。具体样式</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%B1%9E%E6%80%A7.png" class="" title="属性">
-<p>属性模块可大可小，大的话就有属性分组且属性值可事设置内容和类型等。小的就直接设置属性，属性值需在上传商品的时候自行填写。</p>
-<ol start="4">
-<li>品牌模块：</li>
-</ol>
-<p>用于管理品牌的模块，具体样式可见图例：</p>
-<img src="/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/%E5%93%81%E7%89%8C.png" class="" title="品牌">
-<p>品牌模块一般比较标准且通用，但是展示方式和内容也可多可少，是否展示品牌图片和商品统计等依据公司业务来。</p>
-<ol start="5">
-<li>导入模块：</li>
-</ol>
-<p>用于商品新增、商品图片新增、商品信息更新、商品图片更新、品牌新增、品牌图片新增等的模块。</p>
-<h2 id="五、总结">五、总结</h2>
-<p>看似复杂的商品管理系统，在当我们从系统使用的角度来看的时候，就会发现它也有章理可循，我们如何输入商品，输入商品的那些信息，这些信息是什么，这些信息应该怎么处理等等，当我们回答完这些问题的时候，关于商品管理系统的轮廓也有出来了，后面的事情就是根据公司的业务来决定系统功能的多少或从人员使用习惯的用户体验角度来确定页面布局和细节了。</p>
+        <h2 id="一、商店鲜为人知的小秘密">一、商店鲜为人知的小秘密</h2>
+<p>将影响人们购物的外在因素与人们日常的行为习惯相匹配，使人们在购物时得心应手。商店的所有变化，都是为了使购物环境对顾客更友好，遵循人的生理结构， 并适应不同年龄和性别购物者的行为差异。</p>
+<h3 id="1-出入口的位置、热销商品的摆放">1.出入口的位置、热销商品的摆放</h3>
+<p>靠右行驶/走路地区的用户，往往更会挑选右边的东西，因此商场/超市在扶梯之类放东西都是靠右放</p>
+<h3 id="2-缓冲地带">2.缓冲地带</h3>
+<p>人们进入超市不会立即购物，而是需要切换场景，比如从停车场场景切换到购物场景，因此在超市/商场门口会有一条通道，或者放置一些宣传，让人更加快速的完成场景的切换</p>
+<h3 id="3-解放双手">3.解放双手</h3>
+<p>释放双手才能让客户选购更多的商品，如果客户手中拿着东西，一般就会继续选东西了，因此超市沿途会放一些购物篮或购物车</p>
+<h2 id="二、不同群体客户">二、不同群体客户</h2>
+<p>不同群里有不同的偏好，针对不同群体调整购物策略，可以有效提高购买意愿；购物群体分为四类：</p>
+<h3 id="1-男人">1.男人</h3>
+<p>喜欢工具类和电子类产品，喜欢速战速决，喜欢自己阅读说明书来了解产品</p>
+<h3 id="2-女人">2.女人</h3>
+<p>爱购物的本能，更看重购物环境</p>
+<h3 id="3-老人">3.老人</h3>
+<p>比较闲，有充足的时间来购物，对看得清的要求更高，不会注意黄色的东西(看任何东西都会泛黄)；老年人更喜欢为第三代(孙子孙女)消费</p>
+<h3 id="4-小孩">4.小孩</h3>
+<p>商场的婴儿车等都是为了让带婴儿的人安心逛很久。</p>
+<h2 id="三、感官对购物欲望的影响">三、感官对购物欲望的影响</h2>
+<p>感官对人们购物有重要影响，是一个最有诱惑力的因素，当购物成为一个感官之旅，人们就更容易激发欲望，作出购买行为。</p>
+<h3 id="1-触觉">1.触觉</h3>
+<p>触觉是人类最直观的感受之一，也是决定购买的重要因素；通过触摸商品，可让商品与客户之间建立信任感，最终作出购买的决定。</p>
+<h3 id="2-嗅觉">2.嗅觉</h3>
+<p>触觉是人类识别物品的重要信号之一，好闻的气味会让人好感大增，难闻的气味会使人退避三舍。这个原则在商品领域同样适用。食品区充满香味，让人流口水会有效增强用户购买欲望；有些店铺也会这样做，例如星巴克，会有咖啡香味</p>
+<h3 id="3-视觉">3.视觉</h3>
+<p>从生理学角度讲，追求美是人类的天性，人天生偏爱美，喜欢美好的事务；商店让灯光柔和，试衣镜显的更瘦都是为了让人看起来更加美好，从而产生购买欲望。</p>
+<h2 id="四、互联网购物的前景">四、互联网购物的前景</h2>
+<p>与传统相比，互联网购物打破了时间、空间的界限，但无法满足用户触觉、视觉、嗅觉等方面的个性化情感。不同地区用的感官可能不相同。</p>
 
     </div>
 
@@ -408,7 +360,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/" title="从整体角度看商品管理模块">https://milochu.com/2021/01/06/从整体角度看商品管理模块/</a>
+      <a href="https://milochu.com/2021/03/03/%E3%80%8A%E9%A1%BE%E5%AE%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%AD%E4%B9%B0%E3%80%8B/" title="《顾客为什么购买》">https://milochu.com/2021/03/03/《顾客为什么购买》/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -417,21 +369,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E5%90%8E%E5%8F%B0/" rel="tag"><i class="fa fa-tag"></i> 后台</a>
-              <a href="/tags/%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 商品管理</a>
+              <a href="/tags/%E7%94%A8%E6%88%B7%E5%BF%83%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 用户心理</a>
+              <a href="/tags/%E4%B9%A6%E7%B1%8D/" rel="tag"><i class="fa fa-tag"></i> 书籍</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/06/%E5%85%B3%E4%BA%8E%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(OMS)%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E8%BF%99%E4%BA%9B/" rel="prev" title="关于订单管理系统(OMS)，你需要知道这些">
-                  <i class="fa fa-chevron-left"></i> 关于订单管理系统(OMS)，你需要知道这些
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/12/27/%E5%B9%B4%E7%BB%88%E8%B4%A6%E5%8D%95%E6%80%8E%E4%B9%88%E5%81%9A%E6%89%8D%E5%90%B8%E5%BC%95%E4%BA%BA/" rel="next" title="年终账单应该怎么做才能吸引人？">
-                  年终账单应该怎么做才能吸引人？ <i class="fa fa-chevron-right"></i>
+                <a href="/2021/02/08/%E4%B8%80%E6%96%87%E8%AF%BB%E6%87%82%E5%BE%AE%E4%BF%A1%E5%8D%A1%E5%88%B8%E5%92%8C%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%88%B8(%E4%BB%A3%E9%87%91%E5%88%B8%E5%92%8C%E5%95%86%E5%AE%B6%E5%88%B8)/" rel="next" title="一文读懂微信卡券和微信支付券(代金券和商家券)">
+                  一文读懂微信卡券和微信支付券(代金券和商家券) <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -547,9 +496,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://milochu.com/2021/01/06/%E4%BB%8E%E6%95%B4%E4%BD%93%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97/";
-    this.page.identifier = "2021/01/06/从整体角度看商品管理模块/";
-    this.page.title = "从整体角度看商品管理模块";
+    this.page.url = "https://milochu.com/2021/03/03/%E3%80%8A%E9%A1%BE%E5%AE%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%AD%E4%B9%B0%E3%80%8B/";
+    this.page.identifier = "2021/03/03/《顾客为什么购买》/";
+    this.page.title = "《顾客为什么购买》";
     };
   NexT.utils.loadComments('#disqus_thread', () => {
     if (window.DISQUS) {

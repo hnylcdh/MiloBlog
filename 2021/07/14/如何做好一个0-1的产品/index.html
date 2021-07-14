@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"milochu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+<meta name="description" content="一、 前言 前段时间又接了一个0-1的产品，正好这几天有空，因此对产品0-1的做法进行了一个复盘，总结下0-1的产品如何开展；同时也写了一篇《如何评价一个产品经理？》的文章，和大家分享下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何做好一个0-1的产品">
+<meta property="og:url" content="https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/index.html">
+<meta property="og:site_name" content="MiloBlog">
+<meta property="og:description" content="一、 前言 前段时间又接了一个0-1的产品，正好这几天有空，因此对产品0-1的做法进行了一个复盘，总结下0-1的产品如何开展；同时也写了一篇《如何评价一个产品经理？》的文章，和大家分享下。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81.png">
+<meta property="article:published_time" content="2021-07-14T13:25:32.000Z">
+<meta property="article:modified_time" content="2021-07-14T05:34:31.349Z">
+<meta property="article:author" content="Milo">
+<meta property="article:tag" content="产品设计">
+<meta property="article:tag" content="产品流程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81.png">
+
+
+<link rel="canonical" href="https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>如何做好一个0-1的产品 | MiloBlog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186148280-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-186148280-1');
+      }
+    </script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c68130bb76226868a64a26a308c782b9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "[object Object]"}'></script>
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">MiloBlog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">若blog不时常写，那就毫无意义！<br>———— Milo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">16</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81-%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">一、 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="nav-number">2.</span> <span class="nav-text">二、如何做好一个0-1的项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%86%E8%A7%A3%E8%A1%8C%E4%B8%9A"><span class="nav-number">2.1.</span> <span class="nav-text">1. 了解行业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%86%E8%A7%A3%E7%AB%9F%E5%93%81%EF%BC%88%E5%A6%82%E6%9C%89%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">2. 了解竟品（如有）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BA%86%E8%A7%A3%E4%BA%A7%E5%93%81%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%9A%E5%8A%A1"><span class="nav-number">2.3.</span> <span class="nav-text">3. 了解产品要做的业务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%A2%B3%E7%90%86%E8%A7%92%E8%89%B2%E3%80%81%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%85%B3%E7%B3%BB"><span class="nav-number">2.4.</span> <span class="nav-text">4. 梳理角色、业务流程关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%86%E6%9E%90%E4%BA%A7%E5%93%81%E7%A1%AC%E6%80%A7%E8%A6%81%E6%B1%82-%E9%A3%8E%E9%99%A9"><span class="nav-number">2.5.</span> <span class="nav-text">5. 分析产品硬性要求&#x2F;风险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%9E%8B"><span class="nav-number">2.6.</span> <span class="nav-text">6. 设计原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E8%AF%84%E5%AE%A1%E5%8E%9F%E5%9E%8B"><span class="nav-number">2.7.</span> <span class="nav-text">7. 评审原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%86%99%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3-UI%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.8.</span> <span class="nav-text">8. 写需求文档&#x2F;UI设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%90%AF%E5%8A%A8%E4%BC%9A"><span class="nav-number">2.9.</span> <span class="nav-text">9. 启动会</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%BC%80%E5%8F%91%E9%98%B6%E6%AE%B5"><span class="nav-number">2.10.</span> <span class="nav-text">10. 开发阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E6%B5%8B%E8%AF%95%E9%98%B6%E6%AE%B5"><span class="nav-number">2.11.</span> <span class="nav-text">11. 测试阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E9%AA%8C%E6%94%B6%E9%98%B6%E6%AE%B5"><span class="nav-number">2.12.</span> <span class="nav-text">12. 验收阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E4%BA%A7%E5%93%81%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5"><span class="nav-number">2.13.</span> <span class="nav-text">13. 产品上线运营</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Milo"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Milo</p>
+  <div class="site-description" itemprop="description">单身PM狗</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Milo">
+      <meta itemprop="description" content="单身PM狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MiloBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何做好一个0-1的产品
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-07-14 13:25:32 / 修改时间：05:34:31" itemprop="dateCreated datePublished" datetime="2021-07-14T13:25:32+00:00">2021-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">产品设计</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="一、-前言">一、 前言</h2>
+<p>前段时间又接了一个0-1的产品，正好这几天有空，因此对产品0-1的做法进行了一个复盘，总结下0-1的产品如何开展；同时也写了一篇<a target="_blank" rel="noopener" href="http://pm.milochu.com/2rb">《如何评价一个产品经理？》</a>的文章，和大家分享下。</p>
+<a id="more"></a>
+<h2 id="二、如何做好一个0-1的项目">二、如何做好一个0-1的项目</h2>
+<p>个人做一个0-1的产品的步骤如下：</p>
+<img src="/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81.png" class="" title="如何做一个0-1的产品">
+<p>大家可以把上述步骤理解为本人做0-1产品的一个流程清单。下面就分别讲下：</p>
+<h3 id="1-了解行业">1. 了解行业</h3>
+<p>把了解行业作为第一步，是为了先对产品所涉及的行业在宏观有一个清晰的了解。了解下行业的商业模式，行业的盈利能力（未来行业产值多少，例如可以达到多少规模），行业的产业情况、行业的发展态势、行业的法律法规、行业的政策、行业现有的企业（也就是我们竞争对手）、行业的准入门槛。</p>
+<p>这一步的核心之一就是找出竞争对手，通过竞争对手我们才能更进一步的了解我们的业务要做的价值以及发展前景。</p>
+<p>Ps: 大家可能会认为了解行业就是一个完整的市场调研过程，其实并不是这样的。现实当中该产品/项目的市场机会、优劣势等分析其实高层都已经做过了，产品经理并不能决定该产品/项目要不要做，是否立项。产品经理要做就是把产品做出来，但也并不代表产品经理就不能影响产品，我们可以影响产品初期要做的功能、页面的形式/交互等（手动狗头~~）。</p>
+<h3 id="2-了解竟品（如有）">2. 了解竟品（如有）</h3>
+<p>通过了解行业知道了我们的竞争对手有哪些。在这一步，我们就要了解竞争对手的情况，包括它们各自的市场情况（市场占有率，市场占有的地域分布情况等）、业务情况（做了哪些业务、哪些业务没做，为什么不做等）、盈利情况（有没有盈利，盈利的话花了多久才盈利，每年盈利多少等）、用户情况（用户年龄、用户消费水平、地域分布等）等等。当然也要看看他们的产品，好好的体验下，方便借鉴（笑脸~~）。</p>
+<p>通过这一步可以更具体的了解我们业务情况。</p>
+<h3 id="3-了解产品要做的业务">3. 了解产品要做的业务</h3>
+<p>把了解行业和竟品可以看从作宏观视角了解业务价值，那么在这一步我们就从微观上了解自己的业务，可以和负责人和相关同事一起沟通我们产品的愿景、要做哪些业务、业务优先级如何，要服务的群体，初期目标等等。要把业务范围和内容定义清楚，不仅方便产品自己梳理业务流程和设计原型，也方便运营人员作运营的规划。</p>
+<h3 id="4-梳理角色、业务流程关系">4. 梳理角色、业务流程关系</h3>
+<p>当我们定义好业务的范围和内容的时候，就可以梳理下整个业务逻辑、角色和业务流程：</p>
+<ul>
+<li>角色：把产品涉及到的角色都找出来，以打车为例，就涉及到了乘客、平台、司机、银行/第三方支付、公安等，理清角色是为了让我们更好的梳理业务逻辑。</li>
+<li>业务流程：梳理业务流程是重点，要考虑清楚业务整体的运转模式，同时也需考虑各角色要走的步骤和所做操作的内容，例如乘客是怎么下单，下单时候有多少个步骤，每个步骤都要输入什么内容，哪些是是必须输入的，哪些是可选输入，哪些输入可以去掉的（即尽量减少用户的操作）。先整体流程，再到各个子流程或者细分业务的流程。打个比方，打车业务涉及到了乘客、司机、平台三种角色，整体流程就是把三种角色都放到一起，把各角色的大致关系和交互用流程图的形式表达出来（例如乘客下单──平台分发订单──司机接单──司机到达乘客上车地点──乘客上车──司机确认行程开始──行程结束──乘客支付），细分业务流程则是某角色下的业务操作，（例如乘客如何下单：选择上车地点──选择下车地点──点击下单）。</li>
+</ul>
+<h3 id="5-分析产品硬性要求-风险">5. 分析产品硬性要求/风险</h3>
+<p>分析产品硬性要求/风险不仅是对自己负责，更是对产品负责。</p>
+<p>产品硬性要求：产品初期可能没有仔细考虑产品上线时必要的证件和其他要求，例如域名备案、ICP许可证、资金必须第三方托管等。有的证件办理周期长，需要资料多，因此要进尽早办理，避免临近产品上线日期了才知道必须先要取得相关的证件方能上线运营，或者还未办理完成，使产品延期上线运营。</p>
+<p>风险：产品某一些方面是不是违规或违法的。这一点我们一些产品同学都很少考虑，但我认为还是挺重要的。我周边确实发生过因产品违规而（产品、开发）被抓的例子。如果遇到了，可以和负责人沟通这块风险，把顾虑说出来，如不能妥善解决则可以直接拒绝，大不了N+1。</p>
+<h3 id="6-设计原型">6. 设计原型</h3>
+<p>到这一步就很简单了，根据上面了解和梳理的内容画原型就行。可以先把页面都画出来，再考虑页面/流程间的交互方式。尽量做高保真原型，这样在预览原型的时能把自己当成用户来模拟用户的使用场景，同时也方便开发同学们了解产品。</p>
+<h3 id="7-评审原型">7. 评审原型</h3>
+<p>当我们有了流程图和原型图，先和设计师和开发工程师的leader开一次评审会，讲解下业务和原型。开发leader可以从技术角度评审下原型，看看原型上的内容是否可实现，实现的成本和大致时间等；另外他们也会根据自己的产品设计/开发经验提出一些宝贵的建议。</p>
+<h3 id="8-写需求文档-UI设计">8. 写需求文档/UI设计</h3>
+<p>评审过后就是写需求文档了，根据自己公司的传统来写即可，为了减少沟通成本，以及避免开发同学们遗漏功能（口头沟通的内容多了可能会记不住，记不全）PRD尽可能写的详细点。</p>
+<p>设计师也会同步进行UI设计，在设计效果图的时候往往会和产品沟通，原型也可能会随着沟通结果而进行相应的调整。如有大调整则需要和开发leader等人进行同步，让他们重新评审下。</p>
+<h3 id="9-启动会">9. 启动会</h3>
+<p>评审会是和leader们沟通，负责实际开发的小哥哥可能已经通过他们的leader了解到一些产品信息，知道他们要开发这个产品，但产品的细节不完全清楚，因此要通过启动会来向大家介绍业务，展示和说明原型上产品功能（有效果图也可通过效果图来说明）。启</p>
+<p>动会不仅是一个讲解说明会议，也是一个仪式，标志着产品正式进入开发阶段。</p>
+<h3 id="10-开发阶段">10. 开发阶段</h3>
+<p>开发阶段主要是解答开发同学在实际写代码过程中遇到的问题，这个阶段也会帮助我们完善产品，一些细节性的东西在前面的阶段还是会有没有考虑到的。</p>
+<h3 id="11-测试阶段">11. 测试阶段</h3>
+<p>当开发完成后，就是进入测试阶段了，在这个阶段产品经理不要过早介入，等测试工程师把产品流程都走通后再进介入，体验一遍产品，毕竟实际到手操作一遍比看原型和效果图更有场景感，更可以把自己当成是用户，可以发现一些功能缺失的地方，也可以发现交互上的问题。</p>
+<p>产品提前介入是为了在这一步就能向开发提成功能调整的需求，也避免了开发工程师的重复开发，也避免了测试工程师反复测试。重复开发是指测试工程师在向开发工程师提某个bug的时候，开发可能重新调整了整个代码，但是调整后产品经理又要调整涉及到此bug的功能，这时候开发工程师就要调整两次代码，如果调整后有bug，那可能是3次或3次以上了，这可能会导致开发工程师心态奔溃以至于和产品经理产生冲突。反复测试不仅是指功能上的重复测试，还指完整流程的重复测试（如要改的功能虽然小但涉及到的面很广）。</p>
+<h3 id="12-验收阶段">12. 验收阶段</h3>
+<p>验收阶段需要各方一起对产品体验并验收，包括项目负责人、产品经理、运营人员、市场人员等，只有大家一致试用无异议后才能验收，这时候需要各方邮件或者微信回复同意（不能口头同意）。</p>
+<h3 id="13-产品上线运营">13. 产品上线运营</h3>
+<p>当各方都回复同意后，产品可部署到正式服或者正式上线运营。</p>
+<p>以上就是我做一个0-1产品的流程，供大家参考！</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Milo
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/" title="如何做好一个0-1的产品">https://milochu.com/2021/07/14/如何做好一个0-1的产品/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/" rel="tag"><i class="fa fa-tag"></i> 产品设计</a>
+              <a href="/tags/%E4%BA%A7%E5%93%81%E6%B5%81%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 产品流程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/14/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E4%B8%80%E4%B8%AA%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/" rel="prev" title="如何评价一个产品经理">
+                  <i class="fa fa-chevron-left"></i> 如何评价一个产品经理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/03/03/%E3%80%8A%E9%A1%BE%E5%AE%A2%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%AD%E4%B9%B0%E3%80%8B/" rel="next" title="《顾客为什么购买》">
+                  《顾客为什么购买》 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Milo</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">20k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">18 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://milochu.com/2021/07/14/%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%80%E4%B8%AA0-1%E7%9A%84%E4%BA%A7%E5%93%81/";
+    this.page.identifier = "2021/07/14/如何做好一个0-1的产品/";
+    this.page.title = "如何做好一个0-1的产品";
+    };
+  NexT.utils.loadComments('#disqus_thread', () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pmmilo.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
